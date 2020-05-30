@@ -1,0 +1,16 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host public.cvailab.ee
+    HostName public.cvailab.ee
+    Port 2075
+    User huangrt
+
+Host cs144
+	HostName 10.0.2.15
+	LocalForward 2222 localhost:22
+	IdentityFile ~/.ssh/id_rsa
+	User cs144

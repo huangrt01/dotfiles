@@ -1,0 +1,44 @@
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
+alias python3="$HOME/anaconda3/bin/python3"
+alias update_note="cd $HOME/Documents/GitHub/Markdown4Zhihu && python zhihu-publisher.py --input update"
+alias fdrecent="fd . -0 -t f | xargs -0 stat -f '%m%t%Sm %N' | sort -n | cut -f2- | tail -n 1"
+
+# alias base
+alias v='vim'
+alias ll='ls -aGhlt'
+alias la='ls -a'
+alias l='ls -CF'
+alias cls='clear'
+
+alias gs='git status'
+alias gc='git commit'
+alias gqa='git add .'
+
+alias v="vim"
+alias mv="mv -i" # -i prompts before overwrite
+alias mkdir="mkdir -p" # -p make parent dirs as needed
+alias df="df -h" # -h prints human readable format
+
+alias vfzf='vim $(fzf)' #vim打开搜索到的结果文件
+alias cdfzf='cd $(find * -type d | fzf)'
+alias gitfzf='git checkout $(git branch -r | fzf)'
+
+
+# alias docker
+alias dkst="docker stats"
+alias dkps="docker ps"
+alias dklog="docker logs"
+alias dkpsa="docker ps -a"
+alias dkimgs="docker images"
+alias dkcpup="docker-compose up -d"
+alias dkcpdown="docker-compose down"
+alias dkcpstart="docker-compose start"
+alias dkcpstop="docker-compose stop"
