@@ -4,8 +4,9 @@
 
 ########## Variables
 
-dir=~/dotfiles             # dotfiles directory
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"           # dotfiles directory
 olddir=~/dotfiles_old      # old dotfiles backup directory
+echo "$dir"
 files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases"
 
 # create dotfiles_old in homedir
