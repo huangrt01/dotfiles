@@ -7,7 +7,7 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"           # dotfiles directory
 olddir=~/dotfiles_old      # old dotfiles backup directory
 echo "$dir"
-files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases"
+files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases mybin"
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
@@ -61,6 +61,13 @@ fi
 
 if [[ "$(hostname)" == "myServer" ]]; then {}; fi
 install_zsh
+
+
+# install all the submodules
+git submodule update --init --recursive
+
+
+
 if [[ ! -f $HOME/.zplug/init.zsh ]]; then
 	mkdir -p $HOME/.zplug
 	export ZPLUG_HOME=$HOME/.zplug
@@ -80,4 +87,4 @@ if [[ ! -d $HOME/.fzf ]] ; then
     ~/.fzf/install
 fi
 
-
+vim -u NONE -c "helptags ~/.vim/pack/my_plugs/start/nerdtree/doc" -c q

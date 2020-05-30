@@ -75,6 +75,7 @@ export PATH="/usr/local/opt/opencv@2/bin:$PATH"
 # User configuration
 
 export MANPATH="/usr/local/man:$MANPATH"
+export PATH=~/mybin:${PATH}
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -174,28 +175,6 @@ export TERM=xterm-256color
 . $HOME/anaconda3/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
-function marco {
-foo=$(pwd)
-export MARCO=$foo
-}
-function polo { 
-cd "$MARCO" || echo "cd error"
-}
-function debug() {
-echo "start capture the program failure log"
-cnt=-1
-ret=1
-while [[ $ret -eq 1 ]]; do
-        sh "$1" 2>&1
-        ret=$?
-        cnt=$((cnt+1))
-# let cnt++
-if [[ $# -eq 2 ]];then
-    sleep "$2"
-fi
-done       
-echo "succeed after ${cnt} times"
-}
 
 
 eval $(thefuck --alias)
