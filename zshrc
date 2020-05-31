@@ -116,11 +116,11 @@ fi
 zplug load --verbose
 
 AUTOJUMP="$ZSH/custom/plugins/autojump"
-if [[ ! -d "$AUTOJUMP" ]] {
+if [[ ! -d ~/.autojump ]] {
 	echo "autojump not installed!!!"
 }
 
-[[ -s $AUTOJUMP/etc/profile.d/autojump.sh ]] && source $AUTOJUMP/etc/profile.d/autojump.sh
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 if [[ ! -d $HOME/.fzf ]] {
 	echo "fzf not installed!!!"
