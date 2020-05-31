@@ -4,10 +4,14 @@
 
 ########## Variables
 
+# install all the submodules
+git submodule update --init --recursive
+
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"           # dotfiles directory
 olddir=~/dotfiles_old      # old dotfiles backup directory
 echo "$dir"
-files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases mybin"
+ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases mybin zplug fzf oh-my-zsh $ZSH_CUSTOM/plugins/autojump"
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
@@ -30,10 +34,7 @@ done
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
-    # Clone my oh-my-zsh repository from GitHub only if it isn't already present
-    if [[ ! -d $HOME/.oh-my-zsh/ ]]; then
-        git clone http://github.com/robbyrussell/oh-my-zsh.git
-    fi
+	echo "oh-my-zsh not installed!!!"
     # Set the default shell to zsh if it isn't currently set to zsh
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
         chsh -s $(which zsh)
@@ -59,32 +60,21 @@ else
 fi
 }
 
-if [[ "$(hostname)" == "myServer" ]]; then {}; fi
+if [[ "$(hostname)" == "myServer" ]]; then 
+	true; 
+fi
+
 install_zsh
 
 
-# install all the submodules
-git submodule update --init --recursive
 
-
-
-if [[ ! -f $HOME/.zplug/init.zsh ]]; then
-	mkdir -p $HOME/.zplug
-	export ZPLUG_HOME=$HOME/.zplug
-	git clone https://github.com/zplug/zplug $ZPLUG_HOME --depth=1 $HOME/.zplug
-	source $ZPLUG_HOME/init.zsh
-fi
-ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 if [[ ! -d $ZSH_CUSTOM/plugins/autojump ]]; then
   mkdir -p $ZSH_CUSTOM/plugins/autojump
   git clone git://github.com/wting/autojump.git --depth=1 $ZSH_CUSTOM/plugins/autojump 
-  cd "$ZSH_CUSTOM/plugins/autojump" 
+  cd "$ZSH_CUSTOM/plugins/autojump" || exit 
   ./install.py
 fi
 
-if [[ ! -d $HOME/.fzf ]] ; then
-    git clone --depth=1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-fi
+~/.fzf/install
 
 vim -u NONE -c "helptags ~/.vim/pack/my_plugs/start/nerdtree/doc" -c q

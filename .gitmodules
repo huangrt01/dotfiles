@@ -7,3 +7,9 @@
 [submodule "vim/pack/vendor/start/nerdtree"]
 	path = vim/pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree
+[submodule "zplug"]
+	path = zplug
+	url = https://github.com/zplug/zplug
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git

@@ -14,3 +14,8 @@ Host cs144
 	LocalForward 2222 localhost:22
 	IdentityFile ~/.ssh/id_rsa
 	User cs144
+
+Host aliyun
+	HostName 39.97.113.228
+	IdentityFile ~/.ssh/id_rsa
+	User root

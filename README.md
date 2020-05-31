@@ -6,3 +6,7 @@ sh bootstrap.sh
 source ~/.zshrc
 ```
 
+* submodule
+  * [ack.vim](https://github.com/mileszs/ack.vim)
+  * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
+  * [nerdtree](https://github.com/preservim/nerdtree)
