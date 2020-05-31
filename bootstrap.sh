@@ -11,12 +11,12 @@ install_zsh () {
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Set the default shell to zsh if it isn't currently set to zsh
 	echo "zsh having been installed!!!"
-	if [ ! -d $HOME/.oh-my-zsh ]; then
+	if [ ! -d "$HOME/.oh-my-zsh" ]; then
 		echo "install oh-my-zsh!!!"
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	fi
-    if [ ! $(echo "$SHELL") == $(which zsh) ]; then
-        chsh -s $(which zsh)
+    if [ ! "$SHELL" == "$(which zsh)" ]; then
+        chsh -s "$(which zsh)"
     fi
 else
     # If zsh isn't installed, get the platform of the current machine
@@ -74,7 +74,7 @@ fi
 
 
 
-cd "$ZSH_CUSTOM/plugins/autojump" || exit 
+cd "$ZSH_CUSTOM_PLUG/autojump" || exit 
 ./install.py
 
 ~/.fzf/install
