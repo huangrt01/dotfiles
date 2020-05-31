@@ -75,7 +75,14 @@ export PATH="/usr/local/opt/opencv@2/bin:$PATH"
 # User configuration
 
 export MANPATH="/usr/local/man:$MANPATH"
-export PATH=~/mybin:${PATH}
+export PATH=~/.mybin:${PATH}
+for file in ~/.mybin/*
+do
+	if test -f $file
+	then
+		source $file
+	fi
+done
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
