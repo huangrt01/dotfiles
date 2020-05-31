@@ -67,11 +67,14 @@ for file in $files; do
 done
 
 
-if [[ "$(hostname)" == "myServer" ]]; then 
-	true; 
+if [ "$(hostname)" == "myServer" ]; then 
+	true;
 fi
 
-
+if [ -f "$HOME/.ssh/config_local" ]; then
+	rm ~/."ssh/config"
+	ln -s "$HOME/.ssh/config_local" ~/.ssh/config
+fi
 
 
 cd "$ZSH_CUSTOM_PLUG/autojump" || exit 

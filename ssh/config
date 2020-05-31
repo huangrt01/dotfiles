@@ -1,8 +1,8 @@
 # Read more about SSH config files: https://linux.die.net/man/5/ssh_config
 Host *
   AddKeysToAgent yes
-  UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
+  UseKeychain yes
 
 Host public.cvailab.ee
     HostName public.cvailab.ee
