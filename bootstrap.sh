@@ -5,39 +5,17 @@
 ########## Variables
 
 # install all the submodules
-install_zsh
-git submodule update --init --recursive
-
-dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"           # dotfiles directory
-olddir=~/dotfiles_old      # old dotfiles backup directory
-echo "$dir"
-ZSH_CUSTOM="oh-my-zsh/custom"
-files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases mybin zplug fzf $ZSH_CUSTOM/plugins/autojump"
-
-# create dotfiles_old in homedir
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -p $olddir
-echo "done"
-
-# change to the dotfiles directory
-echo -n "Changing to the $dir directory ..."
-cd "$dir"
-echo "done"
-
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/."$file" ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s "$dir"/"$file" ~/."$file"
-done
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Set the default shell to zsh if it isn't currently set to zsh
 	echo "zsh having been installed!!!"
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+	if [ ! -d $HOME/.oh-my-zsh ]; then
+		echo "install oh-my-zsh!!!"
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	fi
+    if [ ! $(echo "$SHELL") == $(which zsh) ]; then
         chsh -s $(which zsh)
     fi
 else
@@ -61,6 +39,33 @@ else
     fi
 fi
 }
+install_zsh
+git submodule update --init --recursive
+
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"           # dotfiles directory
+olddir=~/dotfiles_old      # old dotfiles backup directory
+echo "$dir"
+ZSH_CUSTOM_PLUG="oh-my-zsh/custom/plugins"
+files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases mybin zplug fzf $ZSH_CUSTOM_PLUG/autojump $ZSH_CUSTOM_PLUG/zsh-autosuggestions $ZSH_CUSTOM_PLUG/zsh-completions $ZSH_CUSTOM_PLUG/zsh-syntax-highlighting $ZSH_CUSTOM_PLUG/zsh-history-substring-search"
+
+# create dotfiles_old in homedir
+echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
+mkdir -p $olddir
+echo "done"
+
+# change to the dotfiles directory
+echo -n "Changing to the $dir directory ..."
+cd "$dir"
+echo "done"
+
+# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+for file in $files; do
+    echo "Moving any existing dotfiles from ~ to $olddir"
+    mv ~/."$file" ~/dotfiles_old/
+    echo "Creating symlink to $file in home directory."
+    ln -s "$dir"/"$file" ~/."$file"
+done
+
 
 if [[ "$(hostname)" == "myServer" ]]; then 
 	true; 

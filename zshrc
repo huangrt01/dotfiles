@@ -96,17 +96,19 @@ if [[ ! -f $HOME/.zplug/init.zsh ]] {
 	echo "ZPLUG not installed!!!"
 }
 source $HOME/.zplug/init.zsh
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-completions"
 
-OMZPLUGIN=("git" "python" "vi-mode" )
+OMZPLUGIN=("git" "python" "vi-mode")
+OMZCUSPLUGIN=("zsh-syntax-highlighting" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-completions")
+
 for plug in "${OMZPLUGIN[@]}"
 do
     zplug "$ZSH/plugins/$plug/$plug.plugin.zsh" , from:local
 done
-
+for plug in "${OMZCUSPLUGIN[@]}"
+do
+    zplug "$ZSH/custom/plugins/$plug/$plug.plugin.zsh" , from:local
+done
 if ! zplug check --verbose; then
     echo 'Run "zplug install" to install'
 fi
