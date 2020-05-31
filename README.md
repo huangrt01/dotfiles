@@ -10,3 +10,7 @@ source ~/.zshrc
   * [ack.vim](https://github.com/mileszs/ack.vim)
   * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
   * [nerdtree](https://github.com/preservim/nerdtree)
+  * [zplug](https://github.com/zplug/zplug)
+  * [fzf](https://github.com/junegunn/fzf)
+  * [autojump](https://github.com/wting/autojump.git)
+
