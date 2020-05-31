@@ -10,8 +10,8 @@ git submodule update --init --recursive
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"           # dotfiles directory
 olddir=~/dotfiles_old      # old dotfiles backup directory
 echo "$dir"
-ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases mybin zplug fzf oh-my-zsh $ZSH_CUSTOM/plugins/autojump"
+ZSH_CUSTOM="oh-my-zsh/custom"
+files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases mybin zplug fzf $ZSH_CUSTOM/plugins/autojump"
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."

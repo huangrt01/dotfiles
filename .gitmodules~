@@ -13,6 +13,9 @@
 [submodule "fzf"]
 	path = fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "oh-my-zsh/custom/plugins/autojump"]
+	path = oh-my-zsh/custom/plugins/autojump
+	url = https://github.com/wting/autojump.git
 [submodule "oh-my-zsh/custom/plugin/autojump"]
 	path = oh-my-zsh/custom/plugin/autojump
 	url = https://github.com/wting/autojump.git
