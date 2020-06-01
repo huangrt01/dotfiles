@@ -7,7 +7,6 @@
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python3="$HOME/anaconda3/bin/python3"
 alias update_note="cd $HOME/Documents/GitHub/Markdown4Zhihu && python3 zhihu-publisher.py --input update"
 alias fdrecent="fd . -0 -t f | xargs -0 stat -f '%m%t%Sm %N' | sort -n | cut -f2- | tail -n 1"
 

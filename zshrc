@@ -136,10 +136,6 @@ if [[ ! -d $HOME/.fzf ]] {
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Test if ~/.aliases exists and source it
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
-fi
 
 
 
@@ -183,7 +179,12 @@ export TERM=xterm-256color
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 . $HOME/anaconda3/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
-
-
-
 eval $(thefuck --alias)
+if [ -f ~/.zshrc_local ]; then
+	source ~/.zshrc_local
+fi
+
+# Test if ~/.aliases exists and source it
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
