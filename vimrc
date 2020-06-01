@@ -24,8 +24,12 @@ if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file (restore to previous version)
+  set bdir-=.
+  set bdir+=~/.vimbdir
   if has('persistent_undo')
     set undofile	" keep an undo file (undo changes after closing)
+	set udir-=.
+	set udir+=~/.vimudir
   endif
 endif
 
@@ -33,6 +37,7 @@ if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
   set hlsearch
 endif
+
 
 " Put these in an autocmd group, so that we can delete them easily.
 augroup vimrcEx
