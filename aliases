@@ -17,6 +17,7 @@ alias ll='ls -aGhlt'
 alias la='ls -a'
 alias l='ls -CF'
 alias cls='clear'
+alias dc='cd'
 
 alias gs='git status'
 alias gc='git commit'
