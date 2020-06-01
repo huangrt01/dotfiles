@@ -37,5 +37,5 @@ if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 
 #### other plugins
 * I would install these plugins manually after the configuration of my dotfiles
-* fd, rg, mosh, tig
+* fd, rg, [mosh](https://mosh.org/#getting), tig
 
