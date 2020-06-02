@@ -122,6 +122,8 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load --verbose
 
+
+
 AUTOJUMP="$ZSH/custom/plugins/autojump"
 if [[ ! -d ~/.autojump ]] {
 	echo "autojump not installed!!!"
@@ -178,6 +180,9 @@ export TERM=xterm-256color
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 . $HOME/anaconda3/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+source "$ZSH/custom/plugins/zsh-git-prompt/zshrc.sh"
+PROMPT='%B%m%~%b$(git_super_status) %# '
 
 eval $(thefuck --alias)
 if [ -f ~/.zshrc_local ]; then

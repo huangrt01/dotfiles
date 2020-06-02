@@ -42,3 +42,6 @@
 	path = vim/pack/vendor/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 	shallow = true
+[submodule "oh-my-zsh/custom/plugins/zsh-git-prompt"]
+	path = oh-my-zsh/custom/plugins/zsh-git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt
