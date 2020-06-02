@@ -60,8 +60,6 @@ export UPDATE_ZSH_DAYS=13
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -179,10 +177,13 @@ export TERM=xterm-256color
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-. $HOME/anaconda3/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 source "$ZSH/custom/plugins/zsh-git-prompt/zshrc.sh"
-PROMPT='%B%m%~%b$(git_super_status) %# '
+# PROMPT='%B%m%~%b$(git_super_status) %# '
+#. $HOME/anaconda3/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+source ~/.prompt
+build_prompt
+
 
 eval $(thefuck --alias)
 if [ -f ~/.zshrc_local ]; then
