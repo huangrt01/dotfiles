@@ -7,12 +7,21 @@
 	name = huangrt01
 	email = huangrt01@163.com
 [alias]
-	co = checkout
 	br = branch
+	co = checkout
+	df = diff
+	ds = diff --staged
 	st = status
+	l = log
+	lg = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	lp = log --pretty=oneline
+	sa = stash apply
+	sh = show
+	ss = stash save
 
 # Allow local customizations in the .gitconfig_local file
 [include]
 	path = ~/.gitconfig_local
 [core]
 	editor = vim
+	excludesfile = /Users/huangrt01/.gitignore_global

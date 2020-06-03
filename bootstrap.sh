@@ -46,7 +46,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"           # dotfiles directo
 olddir=~/dotfiles_old      # old dotfiles backup directory
 echo "$dir"
 ZSH_CUSTOM_PLUG="oh-my-zsh/custom/plugins"
-files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig tmux.conf aliases prompt mybin zplug fzf $ZSH_CUSTOM_PLUG/autojump $ZSH_CUSTOM_PLUG/zsh-autosuggestions $ZSH_CUSTOM_PLUG/zsh-completions $ZSH_CUSTOM_PLUG/zsh-syntax-highlighting $ZSH_CUSTOM_PLUG/zsh-history-substring-search $ZSH_CUSTOM_PLUG/zsh-git-prompt"
+files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig gitignore_global tmux.conf aliases prompt mybin zplug fzf $ZSH_CUSTOM_PLUG/autojump $ZSH_CUSTOM_PLUG/zsh-autosuggestions $ZSH_CUSTOM_PLUG/zsh-completions $ZSH_CUSTOM_PLUG/zsh-syntax-highlighting $ZSH_CUSTOM_PLUG/zsh-history-substring-search $ZSH_CUSTOM_PLUG/zsh-git-prompt"
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
