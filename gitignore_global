@@ -10,3 +10,12 @@
 # ignore all .DS_Store files
 .DS_Store
 */.DS_Store
+
+# ignore all files in any directory named build
+# build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+# doc/*.txt
+
+# ignore all .pdf files in the doc/ directory and any of its subdirectories
+# doc/**/*.pdf

@@ -63,7 +63,7 @@ for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv ~/."$file" ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
-    ln -fhs "$dir"/"$file" ~/."$file"
+    ln -fns "$dir"/"$file" ~/."$file"
 done
 
 
@@ -73,7 +73,7 @@ fi
 
 if [ -f "$HOME/.ssh/config_local" ]; then
 	rm ~/."ssh/config"
-	ln -fhs "$HOME/.ssh/config_local" ~/.ssh/config
+	ln -fns "$HOME/.ssh/config_local" ~/.ssh/config
 fi
 
 
