@@ -35,7 +35,24 @@ endif
 if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 ```
 
-#### other plugins
-* I would install these plugins manually after the configuration of my dotfiles
-* fd, rg, [mosh](https://mosh.org/#getting), tig
+#### other softwares
+* I would install these softwares in sequence manually after the configuration of my dotfiles
+* shellcheck, fd, rg, python3, pip3, ipython, ipdb, [mosh](https://mosh.org/#getting), tig
+
+```shell
+sudo apt-get update
+sudo apt install zsh
+zsh --version
+
+# log out and login back
+echo $SHELL
+$SHELL --version
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+sudo apt-get install python3-pip
+pip install --upgrade pip
+pip install ipython
+pip install ipdb
+```
 
