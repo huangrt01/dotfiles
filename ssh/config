@@ -19,3 +19,10 @@ Host aliyun
 	HostName 39.97.113.228
 	IdentityFile ~/.ssh/id_rsa
 	User root
+
+Host github.com
+	User huangrt01@163.com
+	Hostname ssh.github.com
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+	Port 443
