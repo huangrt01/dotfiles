@@ -8,7 +8,7 @@
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
-if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
+if [ -f /bin/zsh ] || [ -f /usr/bin/zsh ]; then
     # Set the default shell to zsh if it isn't currently set to zsh
 	echo "zsh having been installed!!!"
 	if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -55,7 +55,7 @@ echo "done"
 
 # change to the dotfiles directory
 echo -n "Changing to the $dir directory ..."
-cd "$dir"
+cd "$dir" || exit
 echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files

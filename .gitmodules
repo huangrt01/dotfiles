@@ -49,3 +49,6 @@
 [submodule "vim/pack/vendor/start/vim-rhubarb"]
 	path = vim/pack/vendor/start/vim-rhubarb
 	url = git@github.com:tpope/vim-rhubarb
+[submodule "vim/pack/vendor/start/ale"]
+	path = vim/pack/vendor/start/ale
+	url = git@github.com:dense-analysis/ale.git

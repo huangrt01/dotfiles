@@ -132,7 +132,7 @@ inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " modify the upper limit of pasting to 500
-set viminfo='1000,<500 
+set viminfo='1000,<500
 
 " Maintain undo history between sessions
 set undodir=~/.vim/undodir
@@ -157,6 +157,21 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
+" ALE configurations
+" Set this variable to 1 to fix files when you save them.
+" let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\}
+" Enable completion where available.
+" This setting must be set before ALE is loaded.
+"
+" You should not turn this setting on if you wish to use ALE as a completion
+" source for other completion plugins, like Deoplete.
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
+
 let @e = '^r"f>s": "f<C"'
 let @p = 'S{€ýaj@eA,j@ejS},'
 
@@ -168,3 +183,17 @@ if filereadable($LOCALFILE)
     source $LOCALFILE
 endif
 
+
+
+
+
+
+
+" Put these lines at the very end of your vimrc file.
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
