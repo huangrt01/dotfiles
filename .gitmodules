@@ -46,3 +46,6 @@
 	path = oh-my-zsh/custom/plugins/zsh-git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt
 	shallow = true
+[submodule "vim/pack/vendor/start/vim-rhubarb"]
+	path = vim/pack/vendor/start/vim-rhubarb
+	url = git@github.com:tpope/vim-rhubarb

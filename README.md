@@ -7,7 +7,8 @@ source ~/.zshrc
 ```
 
 #### submodules
-* [ack.vim](https://github.com/mileszs/ack.vim), [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim), [nerdtree](https://github.com/preservim/nerdtree), [zplug](https://github.com/zplug/zplug), [fzf](https://github.com/junegunn/fzf), [autojump](https://github.com/wting/autojump.git), [zsh-completions](https://github.com/zsh-users/zsh-completions), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search), [vim-fugitive](https://github.com/tpope/vim-fugitive),[zsh-git-prompt](https://github.com/olivierverdier/zsh-git-prompt)
+* zsh plugins: [zplug](https://github.com/zplug/zplug), [fzf](https://github.com/junegunn/fzf), [autojump](https://github.com/wting/autojump.git), [zsh-completions](https://github.com/zsh-users/zsh-completions), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search), [zsh-git-prompt](https://github.com/olivierverdier/zsh-git-prompt)
+* vim plugins：[ack.vim](https://github.com/mileszs/ack.vim), [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim), [nerdtree](https://github.com/preservim/nerdtree), [vim-fugitive](https://github.com/tpope/vim-fugitive), [vim-rhubarb](https://github.com/tpope/vim-rhubarb)
 * `shallow=true'
 
 #### local customization
@@ -37,7 +38,7 @@ if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 
 #### other softwares
 * I would install these softwares in sequence manually after the configuration of my dotfiles
-* shellcheck, fd, rg, python3, pip3, ipython, ipdb, [mosh](https://mosh.org/#getting), tig
+* [shellcheck](https://github.com/koalaman/shellcheck), fd, rg, python3, pip3, ipython, ipdb,  tig, [lnav](https://github.com/tstack/lnav), [mosh](https://mosh.org/#getting), [hub](https://github.com/github/hub)([用法](https://hub.github.com/#developer))
 
 ```shell
 sudo apt-get update
