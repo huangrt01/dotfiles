@@ -38,7 +38,10 @@ if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 
 #### other softwares
 * I would install these softwares in sequence manually after the configuration of my dotfiles
-* [shellcheck](https://github.com/koalaman/shellcheck), fd, rg, python3, pip3, ipython, ipdb,  tig, [lnav](https://github.com/tstack/lnav), [mosh](https://mosh.org/#getting), [hub](https://github.com/github/hub)([用法](https://hub.github.com/#developer))
+* [shellcheck](https://github.com/koalaman/shellcheck), [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting)
+* [hub](https://github.com/github/hub)([usage](https://hub.github.com/#developer)), tig
+* python3, pip3, ipython, ipdb
+* [Valgrind](https://valgrind.org/)
 
 ```shell
 sudo apt-get update

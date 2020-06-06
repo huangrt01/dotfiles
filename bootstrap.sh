@@ -82,6 +82,9 @@ cd "$ZSH_CUSTOM_PLUG/autojump" || exit
 
 ~/.fzf/install
 
+rm ~/.zcompdump*
+rm ~/.zplug/zcompdump*
+
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-fugitive/doc" -c q
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-rhubarb/doc" -c q
