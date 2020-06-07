@@ -10,9 +10,9 @@ Host public.cvailab.ee
     User huangrt
 
 Host cs144
-	HostName 10.0.2.15
-	LocalForward 2222 localhost:22
+	HostName localhost
 	IdentityFile ~/.ssh/id_rsa
+	Port 2222
 	User cs144
 
 Host aliyun
