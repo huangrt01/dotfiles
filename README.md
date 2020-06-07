@@ -41,7 +41,7 @@ if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 * [shellcheck](https://github.com/koalaman/shellcheck), [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting)
 * [hub](https://github.com/github/hub)([usage](https://hub.github.com/#developer)), tig
 * python3, pip3, ipython, ipdb
-* [Valgrind](https://valgrind.org/)
+* [Valgrind](https://valgrind.org/), Perf, stress
 
 ```shell
 sudo apt-get update
@@ -58,5 +58,21 @@ sudo apt-get install python3-pip
 pip install --upgrade pip
 pip install ipython
 pip install ipdb
+
+# install perf
+sudo apt install linux-source
+cd /usr/src
+tar -xjf linux-source-4.4.0.tar.bz2
+cd tools/perf
+make # fail! why?
+sudo apt install linux-tools-common
+
+perf
+# ...
+# follow the instructions
+# ...
+# finish installing perf
+
+apt install stress
 ```
 
