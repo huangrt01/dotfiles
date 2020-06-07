@@ -121,6 +121,16 @@ fi
 zplug load --verbose
 
 
+eval $(thefuck --alias)
+if [ -f ~/.zshrc_local ]; then
+	source ~/.zshrc_local
+fi
+
+# Test if ~/.aliases exists and source it
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+	echo "source aliases"
+fi
 
 AUTOJUMP="$ZSH/custom/plugins/autojump"
 if [[ ! -d ~/.autojump ]] {
@@ -185,12 +195,3 @@ source ~/.prompt
 build_prompt
 
 
-eval $(thefuck --alias)
-if [ -f ~/.zshrc_local ]; then
-	source ~/.zshrc_local
-fi
-
-# Test if ~/.aliases exists and source it
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
-fi

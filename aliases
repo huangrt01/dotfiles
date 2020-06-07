@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -21,6 +21,7 @@ alias dc='cd'
 alias gs='git status'
 alias gc='git commit'
 alias gqa='git add .'
+alias glast='git last | head -1 | cut -f2- -d '\'' '\'' | xargs git show'
 
 alias v="vim"
 alias mv="mv -i" # -i prompts before overwrite
