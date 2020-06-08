@@ -100,6 +100,7 @@ bindkey -v
 if [[ ! -f $HOME/.zplug/init.zsh ]] {
 	echo "ZPLUG not installed!!!"
 }
+source ~/.zplug/init.zsh
 
 OMZPLUGIN=("git" "python" "vi-mode")
 OMZCUSPLUGIN=("zsh-syntax-highlighting" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-completions")
