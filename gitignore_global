@@ -11,6 +11,9 @@
 .DS_Store
 */.DS_Store
 
+# ignore VSCODE configuration
+.vscode/*
+
 # ignore all files in any directory named build
 # build/
 
