@@ -95,6 +95,7 @@ fi
 # ZSH-VIM Mode
 bindkey -v
 
+TZ='Asia/Shanghai'; export TZ
 
 # ZPlug configuration
 if [[ ! -f $HOME/.zplug/init.zsh ]] {
