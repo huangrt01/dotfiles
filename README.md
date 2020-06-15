@@ -40,8 +40,8 @@ if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 * I would install these softwares in sequence manually after the configuration of my dotfiles
 * [shellcheck](https://github.com/koalaman/shellcheck), [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting)
 * [hub](https://github.com/github/hub)([usage](https://hub.github.com/#developer)), tig
-* python3, pip3, ipython, ipdb
-* [Valgrind](https://valgrind.org/), Perf, stress
+
+* [Valgrind](https://valgrind.org/), Perf, stress, [rr](https://rr-project.org/), htop
 
 ```shell
 sudo apt-get update
@@ -74,5 +74,17 @@ perf
 # finish installing perf
 
 apt install stress
+apt install htop
 ```
+
+* python3, pip3, ipython, ipdb, [line_profiler](https://github.com/pyutils/line_profiler), [memory-profiler](https://pypi.org/project/memory-profiler/), [pycallgraph](http://pycallgraph.slowchop.com/en/master/)
+```
+pip install memory-profiler
+pip install line_profiler
+pip install pycallgraph
+apt/brew install graphviz
+# dot -v
+```
+
+
 
