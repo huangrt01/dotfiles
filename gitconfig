@@ -28,4 +28,4 @@
 	path = ~/.gitconfig_local
 [core]
 	editor = vim
-	excludesfile = /Users/huangrt01/.gitignore_global
+	excludesfile = ~/.gitignore_global

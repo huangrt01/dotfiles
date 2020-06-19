@@ -92,5 +92,7 @@ apt/brew install graphviz
 # dot -v
 ```
 
+**Security**:
 
+* Firefox Add-on: HTTPS Everywhere, Multi-Account Containers, uBlock Origin([Github](https://github.com/gorhill/uBlock))
 

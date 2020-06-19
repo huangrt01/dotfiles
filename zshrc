@@ -126,6 +126,8 @@ if [ -f ~/.zshrc_local ]; then
 	source ~/.zshrc_local
 fi
 
+git config --global core.excludesfile ~/.gitignore_global
+
 # Test if ~/.aliases exists and source it
 if [ -f ~/.aliases ]; then
     source ~/.aliases
