@@ -6,6 +6,7 @@
 [user]
 	name = huangrt01
 	email = huangrt01@163.com
+	signingkey = FA27DC667CF8ACBEAB82282E499E970F57682D66
 [alias]
 	br = branch
 	ci = commit
@@ -31,3 +32,7 @@
 	excludesfile = ~/.gitignore_global
 [credential]
 	helper = cache
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true

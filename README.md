@@ -96,3 +96,5 @@ apt/brew install graphviz
 
 * Firefox Add-on: HTTPS Everywhere, Multi-Account Containers, uBlock Origin([Github](https://github.com/gorhill/uBlock))
 
+* [gpg](https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages), [haveged](https://www.digitalocean.com/community/tutorials/how-to-setup-additional-entropy-for-cloud-servers-using-haveged)
+

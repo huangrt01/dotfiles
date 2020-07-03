@@ -186,6 +186,7 @@ unset __conda_setup
 export CLICOLOR=1
 export TERM=xterm-256color
 
+export GPG_TTY=$(tty)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
