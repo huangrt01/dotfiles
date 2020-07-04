@@ -186,7 +186,10 @@ unset __conda_setup
 export CLICOLOR=1
 export TERM=xterm-256color
 
+# Fix GPG signing failed bug
 export GPG_TTY=$(tty)
+# GPG Key
+GPGKEY="FA27DC667CF8ACBEAB82282E499E970F57682D66"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
