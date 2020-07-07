@@ -32,7 +32,3 @@
 	excludesfile = ~/.gitignore_global
 [credential]
 	helper = cache
-[gpg]
-	program = gpg2
-[commit]
-	gpgsign = true

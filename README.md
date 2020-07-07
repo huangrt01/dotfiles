@@ -36,15 +36,24 @@ endif
 if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 ```
 
-#### other softwares
-I would install these softwares in sequence manually after the configuration of my dotfiles
+#### Manually install
+
+* iTerm2, powerline-font, brew
+
+```sh
+git clone git@github.com:powerline/fonts
+cd fonts && ./install.sh
+# enter iTerm2/Preferences/Profile/Text/Font/Meslo*
+```
 
 * vim-ale related: [shellcheck](https://github.com/koalaman/shellcheck), [write-good](https://github.com/btford/write-good)(or [proselint](http://proselint.com/) )
 
 ```shell
+brew/apt install shellcheck
 npm install -g write-good
 ```
 
+* MailMaster, WeChat
 * [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting)
 * [hub](https://github.com/github/hub)([usage](https://hub.github.com/#developer)), tig
 * [Valgrind](https://valgrind.org/), Perf, stress, [rr](https://rr-project.org/), htop
@@ -94,7 +103,20 @@ apt/brew install graphviz
 
 **Security**:
 
-* Firefox Add-on: HTTPS Everywhere, Multi-Account Containers, uBlock Origin([Github](https://github.com/gorhill/uBlock))
-
 * [gpg](https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages), [haveged](https://www.digitalocean.com/community/tutorials/how-to-setup-additional-entropy-for-cloud-servers-using-haveged)
 
+```sh
+brew install gnupg
+```
+
+**Firefox Add-on**
+
+* HTTPS Everywhere, Multi-Account Containers(No Chrome), [uBlock Origin](https://github.com/gorhill/uBlock), 1Password
+
+* [stylus](https://github.com/openstyles/stylus/)
+* Full Web Page Screenshots (Chrome: Full Page Screen Capture)
+
+#### Mac 
+* iTerm2, Typora
+* [hammerspoon](https://github.com/Hammerspoon/hammerspoon)
+* [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
