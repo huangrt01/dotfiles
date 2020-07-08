@@ -4,6 +4,10 @@ Host *
   IdentityFile ~/.ssh/id_rsa
   UseKeychain yes
 
+Host 10.*
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
+
 Host public.cvailab.ee
     HostName public.cvailab.ee
     Port 2075
