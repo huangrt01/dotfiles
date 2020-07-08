@@ -48,7 +48,9 @@
 	shallow = true
 [submodule "vim/pack/vendor/start/vim-rhubarb"]
 	path = vim/pack/vendor/start/vim-rhubarb
-	url = git@github.com:tpope/vim-rhubarb
+	url = https://github.com:tpope/vim-rhubarb
+	shallow = true
 [submodule "vim/pack/vendor/start/ale"]
 	path = vim/pack/vendor/start/ale
-	url = git@github.com:dense-analysis/ale.git
+	url = https://github.com:dense-analysis/ale.git
+	shallow = true
