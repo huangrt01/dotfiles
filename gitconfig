@@ -3,10 +3,6 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-[user]
-	name = huangrt01
-	email = huangrt01@163.com
-	signingkey = FA27DC667CF8ACBEAB82282E499E970F57682D66
 [alias]
 	br = branch
 	ci = commit
