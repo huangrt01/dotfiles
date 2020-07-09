@@ -26,7 +26,11 @@ Host aliyun
 
 Host github.com
 	User huangrt01@163.com
-	Hostname ssh.github.com
+	HostName ssh.github.com
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
 	Port 443
+
+Host bytedance
+  HostName 10.21.216.67
+  User huangruiteng
