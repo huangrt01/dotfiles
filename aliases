@@ -22,6 +22,7 @@ alias gs='git status'
 alias gc='git commit'
 alias gqa='git add .'
 alias glast='git last | head -1 | cut -f2- -d '\'' '\'' | xargs git show'
+alias gclean='git reset --hard && git clean -dfx'
 
 alias v="vim"
 alias mv="mv -i" # -i prompts before overwrite
