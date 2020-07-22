@@ -69,6 +69,8 @@ export UPDATE_ZSH_DAYS=13
 source $ZSH/oh-my-zsh.sh
 export HOMEBREW_NO_AUTO_UPDATE=true
 export PATH="/usr/local/opt/opencv@2/bin:$PATH"
+export PATH=$HOME/valgrind/bin:$PATH
+export VALGRIND_LIB=~/valgrind/lib/valgrind/
 
 # User configuration
 
