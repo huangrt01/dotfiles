@@ -4,7 +4,7 @@
 ```shell
 chmod 777 bootstrap.sh
 ./bootstrap.sh
-source ~/.zshrc
+zsh
 ```
 
 #### submodules
@@ -55,7 +55,7 @@ npm install -g write-good
 ```
 
 * MailMaster, WeChat
-* [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting)
+* [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting), [tree](http://mama.indstate.edu/users/ice/tree/)
 * [hub](https://github.com/github/hub)([usage](https://hub.github.com/#developer)), tig
 * [Valgrind](https://valgrind.org/), Perf, stress, [rr](https://rr-project.org/), htop
 
