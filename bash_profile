@@ -8,7 +8,7 @@ if [ $? -eq 0 ]; then
     \eval "$__conda_setup"
 else
     if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/anaconda3/etc/profile.d/conda.sh"
+# . "/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
         CONDA_CHANGEPS1=false conda activate base
     else
         \export PATH="/anaconda3/bin:$PATH"
@@ -24,7 +24,7 @@ if [ $? -eq 0 ]; then
     \eval "$__conda_setup"
 else
     if [ -f "/Users/huangrt01/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/huangrt01/anaconda3/etc/profile.d/conda.sh"
+# . "/Users/huangrt01/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
         CONDA_CHANGEPS1=false conda activate base
     else
         \export PATH="/Users/huangrt01/anaconda3/bin:$PATH"
@@ -38,3 +38,19 @@ if [ -f '/Users/huangrt01/google-cloud-sdk/path.bash.inc' ]; then . '/Users/huan
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/huangrt01/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/huangrt01/google-cloud-sdk/completion.bash.inc'; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
