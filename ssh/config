@@ -31,6 +31,3 @@ Host github.com
 	IdentityFile ~/.ssh/id_rsa
 	Port 443
 
-Host bytedance
-  HostName 10.21.216.67
-  User huangruiteng
