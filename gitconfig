@@ -22,6 +22,8 @@
 	unstage = reset HEAD --
 	up = pull --rebase
 
+[diff]
+	tool = vimdiff
 
 # Allow local customizations in the .gitconfig_local file
 [include]
