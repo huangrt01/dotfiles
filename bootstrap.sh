@@ -43,7 +43,8 @@ install_zsh
 VIM_PLUG="vim/pack/vendor/start"
 ZSH_CUSTOM_PLUG="oh-my-zsh/custom/plugins"
 ZSH_PLUG="$ZSH_CUSTOM_PLUG/autojump $ZSH_CUSTOM_PLUG/zsh-autosuggestions $ZSH_CUSTOM_PLUG/zsh-completions $ZSH_CUSTOM_PLUG/zsh-syntax-highlighting $ZSH_CUSTOM_PLUG/zsh-history-substring-search $ZSH_CUSTOM_PLUG/zsh-git-prompt "
-submodules="$VIM_PLUG/ack.vim $VIM_PLUG/ctrlp.vim $VIM_PLUG/nerdtree $VIM_PLUG/vim-fugitive $VIM_PLUG/vim-rhubarb $VIM_PLUG/ale zplug fzf "$ZSH_PLUG
+OTHER_PLUG="cpp_etudes "
+submodules="$VIM_PLUG/ack.vim $VIM_PLUG/ctrlp.vim $VIM_PLUG/nerdtree $VIM_PLUG/vim-fugitive $VIM_PLUG/vim-rhubarb $VIM_PLUG/ale zplug fzf "$ZSH_PLUG$OTHER_PLUG
 
 # DON'T USE git submodule update --init --recursive, may cause the submodules dirty
 for file in $submodules; do
@@ -54,7 +55,7 @@ done
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"           # dotfiles directory
 olddir=~/dotfiles_old      # old dotfiles backup directory
 echo "$dir"
-files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig gitignore_global tmux.conf aliases prompt mybin zplug fzf "$ZSH_PLUG 
+files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig gitignore_global tmux.conf aliases prompt mybin zplug fzf "$ZSH_PLUG$OTHER_PLUG
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir

@@ -54,3 +54,6 @@
 	path = vim/pack/vendor/start/ale
 	url = https://github.com/dense-analysis/ale.git
 	shallow = true
+[submodule "cpp_etudes"]
+	path = cpp_etudes
+	url = https://github.com/satanson/cpp_etudes
