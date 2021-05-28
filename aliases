@@ -46,3 +46,7 @@ alias dkcpup="docker-compose up -d"
 alias dkcpdown="docker-compose down"
 alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
+
+# alias softwares
+alias cpptree="~/dotfiles/cpp_etudes/cpptree.pl"
+alias calltree="~/dotfiles/cpp_etudes/calltree.pl"
