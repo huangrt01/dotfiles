@@ -105,7 +105,7 @@ if [[ ! -f $HOME/.zplug/init.zsh ]] {
 }
 source ~/.zplug/init.zsh
 
-OMZPLUGIN=("git" "python" "vi-mode")
+OMZPLUGIN=("git" "python" "vi-mode" "thefuck")
 OMZCUSPLUGIN=("zsh-syntax-highlighting" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-completions")
 
 for plug in "${OMZPLUGIN[@]}"
