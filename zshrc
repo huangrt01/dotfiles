@@ -105,6 +105,7 @@ if [[ ! -f $HOME/.zplug/init.zsh ]] {
 }
 source ~/.zplug/init.zsh
 
+# use thefuck: double-click ESC
 OMZPLUGIN=("git" "python" "vi-mode" "thefuck")
 OMZCUSPLUGIN=("zsh-syntax-highlighting" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-completions")
 
