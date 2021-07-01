@@ -55,7 +55,18 @@ npm install -g write-good
 ```
 
 * MailMaster, WeChat
-* [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting), [tree](http://mama.indstate.edu/users/ice/tree/)
+* [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting), [tree](http://mama.indstate.edu/users/ice/tree/), ag
+
+```shell
+apt install silversearcher-ag
+apt install tree
+
+# https://nodejs.org/en/download/package-manager/#installing-node-js-via-package-manager
+npm install -g tldr
+
+apt install fd-find
+```
+
 * [hub](https://github.com/github/hub)([usage](https://hub.github.com/#developer)), tig
 * [Valgrind](https://valgrind.org/), Perf, stress, [rr](https://rr-project.org/), htop
 
