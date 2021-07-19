@@ -83,8 +83,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 sudo apt-get install python3-pip
 pip install --upgrade pip
+pip install --upgrade setuptools
 pip install ipython
 pip install ipdb
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenvwrapper
+export WORKON_HOME=~/Envs
+mkdir -p $WORKON_HOME
+source /usr/local/bin/virtualenvwrapper.sh
+# or
+source ~/.local/bin/virtualenvwrapper.sh
 
 # install perf
 sudo apt install linux-source
