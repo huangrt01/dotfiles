@@ -1,5 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# related issue: https://github.com/ohmyzsh/ohmyzsh/issues/10777
+alias python="python3"
+
 source ~/.bash_profile
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -137,11 +141,13 @@ if [ -f ~/.aliases ]; then
 fi
 
 AUTOJUMP="$ZSH/custom/plugins/autojump"
-if [[ ! -d ~/.autojump ]] {
+if [[ ! -d $AUTOJUMP ]] {
 	echo "autojump not installed!!!"
 }
 
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+#[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 if [[ ! -d $HOME/.fzf ]] {
 	echo "fzf not installed!!!"
@@ -186,3 +192,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export JAVA_HOME=/usr/local/opt/openjdk@8
+export PATH="/usr/local/opt/thrift@0.9/bin:$PATH"

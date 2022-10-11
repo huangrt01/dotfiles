@@ -65,6 +65,7 @@ apt install tree
 npm install -g tldr
 
 apt install fd-find
+apt install cloc
 ```
 
 * [hub](https://github.com/github/hub)([usage](https://hub.github.com/#developer)), tig

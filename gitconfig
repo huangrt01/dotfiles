@@ -33,3 +33,6 @@
 	excludesfile = ~/.gitignore_global
 [credential]
 	helper = cache
+[user]
+	name = huangrt01
+	email = huangrt01@163.com
