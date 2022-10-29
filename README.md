@@ -39,6 +39,12 @@ if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 
 #### Manually install
 
+```sh
+sudo apt-get update
+sudo apt-get install manpages-dev
+sudo apt-get install gdb
+```
+
 * iTerm2, powerline-font, brew
 
 ```sh
