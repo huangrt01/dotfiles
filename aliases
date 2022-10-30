@@ -30,6 +30,9 @@ alias v="vim"
 alias mv="mv -i" # -i prompts before overwrite
 alias mkdir="mkdir -p" # -p make parent dirs as needed
 alias df="df -h" # -h prints human readable format
+if [[ -z $SSH_CONNECTION ]]; then
+	alias opensub='open -a "sublime text"'
+fi
 
 alias vfzf='vim $(fzf)' #vim打开搜索到的结果文件
 alias cdfzf='cd $(find * -type d | fzf)'
