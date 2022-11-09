@@ -38,6 +38,10 @@ alias vfzf='vim $(fzf)' #vim打开搜索到的结果文件
 alias cdfzf='cd $(find * -type d | fzf)'
 alias gitfzf='git checkout $(git branch -r | fzf)'
 
+# alias debugging
+alias sudo='sudo ' # https://linuxhandbook.com/run-alias-as-sudo/
+alias pstack='gdb -q --batch --ex "set height 0" -ex "thread apply all bt" '
+alias pstackfull='gdb -q --batch --ex "set height 0" -ex "thread apply all bt full" '
 
 # alias docker
 alias dkst="docker stats"
@@ -50,6 +54,6 @@ alias dkcpdown="docker-compose down"
 alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
 
-# alias softwares
+# alias code-reading
 alias cpptree="~/dotfiles/cpp_etudes/cpptree.pl"
 alias calltree="~/dotfiles/cpp_etudes/calltree.pl"
