@@ -64,7 +64,12 @@ npm install -g write-good
 * [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting), [tree](http://mama.indstate.edu/users/ice/tree/), ag
 
 ```shell
-apt install silversearcher-ag
+# apt install silversearcher-ag
+git clone https://github.com/satanson/the_silver_searcher.git --depth=1
+sudo apt install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+./build.sh
+sudo make install
+
 apt install tree
 
 # https://nodejs.org/en/download/package-manager/#installing-node-js-via-package-manager
