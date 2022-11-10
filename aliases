@@ -30,6 +30,7 @@ alias v="vim"
 alias mv="mv -i" # -i prompts before overwrite
 alias mkdir="mkdir -p" # -p make parent dirs as needed
 alias df="df -h" # -h prints human readable format
+alias f="fuck"
 if [[ -z $SSH_CONNECTION ]]; then
 	alias opensub='open -a "sublime text"'
 fi
@@ -42,6 +43,7 @@ alias gitfzf='git checkout $(git branch -r | fzf)'
 alias sudo='sudo ' # https://linuxhandbook.com/run-alias-as-sudo/
 alias pstack='gdb -q --batch --ex "set height 0" -ex "thread apply all bt" '
 alias pstackfull='gdb -q --batch --ex "set height 0" -ex "thread apply all bt full" '
+alias straceopen='strace -e "open" -e "openat" '
 
 # alias docker
 alias dkst="docker stats"

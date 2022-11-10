@@ -93,6 +93,7 @@ pip install --upgrade pip
 pip install --upgrade setuptools
 pip install ipython
 pip install ipdb
+pip3 install thefuck
 
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenvwrapper
 export WORKON_HOME=~/Envs

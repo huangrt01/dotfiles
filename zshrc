@@ -153,6 +153,14 @@ if [[ ! -d $HOME/.fzf ]] {
 	echo "fzf not installed!!!"
 }
 
+if type fuck 2>&1 > /dev/null; then
+	eval $(thefuck --alias)
+	eval $(thefuck --alias FUCK)
+	export THEFUCK_REQUIRE_CONFIRMATION='true'
+else
+	echo "fuck not installed!!! please brew/pip3 install thefuck"
+fi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -173,8 +181,8 @@ source ~/.prompt
 build_prompt
 
 # fix vim tab
-rm ~/.zcompdump*
-rm ~/.zplug/zcompdump*
+rm -f ~/.zcompdump*
+rm -f ~/.zplug/zcompdump*
 
 
 # >>> conda initialize >>>
@@ -195,3 +203,5 @@ unset __conda_setup
 export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
 export JAVA_HOME=/usr/local/opt/openjdk@8
 export PATH="/usr/local/opt/thrift@0.9/bin:$PATH"
+# tvmc
+export PATH="$HOME/.local/bin:$PATH"
