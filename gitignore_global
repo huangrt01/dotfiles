@@ -12,7 +12,7 @@
 */.DS_Store
 
 # ignore VSCODE configuration
-*/.vscode
+**/.vscode
 
 # ignore all files in any directory named build
 # build/
@@ -22,3 +22,6 @@
 
 # ignore all .pdf files in the doc/ directory and any of its subdirectories
 # doc/**/*.pdf
+
+# ignore cpptree intermediate results
+**/*cpptree*
