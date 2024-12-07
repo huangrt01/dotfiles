@@ -1,4 +1,22 @@
 ## dotfiles
+
+### 从零搭建工作环境
+
+* 飞书、飞连、Dotfiles、dotfiles-local
+* Iterm2、Sublime text
+  * enter iTerm2/Preferences/Profile/Text/Font/Meslo*
+
+* CS-Notes
+* Chrome账号、Typora
+* VSCode、豆包
+* QuickJump
+* Mendeley
+
+* [hammerspoon](https://github.com/Hammerspoon/hammerspoon)
+* [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
+
+### dotfile
+
 * my dotfiles, the design philosophy is illustrated in my [Shell Note](https://github.com/huangrt01/CS-Notes/blob/master/Notes/Output/Shell-MIT-6-NULL.md)
 * easy-to-use
 ```shell
@@ -38,20 +56,6 @@ if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 ```
 
 #### Manually install
-
-```sh
-sudo apt-get update
-sudo apt-get install manpages-dev
-sudo apt-get install gdb
-```
-
-* iTerm2, powerline-font, brew
-
-```sh
-git clone git@github.com:powerline/fonts
-cd fonts && ./install.sh
-# enter iTerm2/Preferences/Profile/Text/Font/Meslo*
-```
 
 * vim-ale related: [shellcheck](https://github.com/koalaman/shellcheck), [write-good](https://github.com/btford/write-good)(or [proselint](http://proselint.com/) )
 
@@ -147,9 +151,21 @@ brew install gnupg
 * HTTPS Everywhere, Multi-Account Containers(No Chrome), [uBlock Origin](https://github.com/gorhill/uBlock), 1Password
 
 * [stylus](https://github.com/openstyles/stylus/)
-* Full Web Page Screenshots (Chrome: Full Page Screen Capture)
+* Full Web Page Screenshots (Chrome: Full Page Screen Capture
 
-#### Mac 
-* iTerm2, Typora
-* [hammerspoon](https://github.com/Hammerspoon/hammerspoon)
-* [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
+
+
+### Linux
+
+```
+sudo apt-get update
+sudo apt-get install manpages-dev
+sudo apt-get install gdb
+```
+
+### Macbook
+
+* 自动化：
+  * 安装brew
+  * 下载安装powerline font
+

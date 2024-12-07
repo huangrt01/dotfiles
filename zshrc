@@ -165,7 +165,6 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 export CLICOLOR=1
-export TERM=xterm-256color
 
 # Fix GPG signing failed bug
 export GPG_TTY=$(tty)
@@ -174,8 +173,11 @@ GPGKEY="FA27DC667CF8ACBEAB82282E499E970F57682D66"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+export TERM='xterm-256color'
 source "$ZSH/custom/plugins/zsh-git-prompt/zshrc.sh"
 # PROMPT='%B%m%~%b$(git_super_status) %# '
+# https://github.com/carlcarl/powerline-zsh?tab=readme-ov-file
 #. $HOME/anaconda3/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 source ~/.prompt
 build_prompt
@@ -205,3 +207,4 @@ export JAVA_HOME=/usr/local/opt/openjdk@8
 export PATH="/usr/local/opt/thrift@0.9/bin:$PATH"
 # tvmc
 export PATH="$HOME/.local/bin:$PATH"
+alias python=/usr/bin/python3

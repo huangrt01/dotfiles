@@ -2,6 +2,8 @@
 ########################
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 
+set -ex
+
 ########## Variables
 
 # install all the submodules
@@ -86,7 +88,7 @@ fi
 
 
 cd "$ZSH_CUSTOM_PLUG/autojump" || exit 
-./install.py
+python3 ./install.py
 
 ~/.fzf/install
 
@@ -96,3 +98,11 @@ rm ~/.zplug/zcompdump*
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-fugitive/doc" -c q
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vim-rhubarb/doc" -c q
+
+os_type=$(uname - s)
+if [ "$os_type" = "Darwin" ]; then
+ echo "This is a Mac. Start to install mac dependencies"
+ ./mac_install.sh
+else
+ echo "This is not a Mac."
+fi
