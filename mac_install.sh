@@ -13,3 +13,7 @@ cd fonts && ./install.sh
 cd .. & rm -rf fonts
 # enter iTerm2/Preferences/Profile/Text/Font/Meslo*
 
+# solarized-dark theme(patched version for auto-suggestions)
+# https://gist.github.com/kevin-smets/8568070#iterm2
+# https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20-%20Patched.itermcolors
+

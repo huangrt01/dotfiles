@@ -9,9 +9,10 @@
 * CS-Notes
 * Chrome账号、Typora
 * VSCode、豆包
-* QuickJump
 * Mendeley
+  * https://www.mendeley.com/download-reference-manager/macOS
 
+* QuickJump
 * [hammerspoon](https://github.com/Hammerspoon/hammerspoon)
 * [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 

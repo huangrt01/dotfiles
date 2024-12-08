@@ -71,6 +71,7 @@ export UPDATE_ZSH_DAYS=13
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 source $ZSH/oh-my-zsh.sh
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 export HOMEBREW_NO_AUTO_UPDATE=true
 export PATH="/usr/local/opt/opencv@2/bin:$PATH"
 export PATH=$HOME/valgrind/bin:$PATH
