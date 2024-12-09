@@ -5,10 +5,11 @@
 * 飞书、飞连、Dotfiles、dotfiles-local
 * Iterm2、Sublime text
   * enter iTerm2/Preferences/Profile/Text/Font/Meslo*
+  * Unlimited scroll back 
 
 * CS-Notes
 * Chrome账号、Typora
-* VSCode、豆包
+* VSCode、豆包、微信
 * Mendeley
   * https://www.mendeley.com/download-reference-manager/macOS
 
