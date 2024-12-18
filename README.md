@@ -2,6 +2,9 @@
 
 ### 从零搭建工作环境
 
+* Macbook
+  * 触控板：轻点
+
 * 飞书、飞连、Dotfiles、dotfiles-local
 * Iterm2、Sublime text
   * enter iTerm2/Preferences/Profile/Text/Font/Meslo*
