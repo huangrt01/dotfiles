@@ -179,12 +179,17 @@ sudo apt-get install gdb
 #### 开发必备插件
 
 * 公共: 
+  * Python
   * Remote - SSH
   * **ByteDance Authenticator**
   * MarsCode
   * GitLens
-  * Code Spell Checker, GitLens, EditorConfig for VSCode, String Manipulation, Visual Studio IntelliCode
+  * Code Spell Checker, EditorConfig for VSCode, String Manipulation, Visual Studio IntelliCode
   * Code Runner
+* Python:
+  * Python
+  * yapf
+    * 添加settings.json
 * C++: [cpplint](https://github.com/cpplint/cpplint), CodeLLDB, Header source switch, Rainbow Brackets, C++ Intellisense
   * CMake, CMake Tools
     * cmake插件需要cmake3.9.4以上版本的cmake的支持，ubuntu16.04以下的用户可能需要手动安装新版本的cmake
