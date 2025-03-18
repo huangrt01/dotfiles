@@ -69,9 +69,15 @@ cd "$dir" || exit
 echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+echo "Moving any existing dotfiles from ~ to $olddir"
+mkdir -p ~/.ssh
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/."$file" ~/dotfiles_old/
+    if [[ -f "~/.$file" ]]; then
+        echo "Moving $file from ~ to $olddir"
+        mv ~/."$file" ~/dotfiles_old/
+    else
+        echo "$file not exists in ~"
+    fi
     echo "Creating symlink to $file in home directory."
     ln -fns "$dir"/"$file" ~/."$file"
 done

@@ -5,20 +5,63 @@
 * Macbook
   * 触控板：轻点
 
-* 飞书、飞连、Dotfiles、dotfiles-local
+* 飞书、飞连
+
+* 个人git仓库：
+
+  * Dotfiles、CS-Notes
+
+  * Dotfiles-local
+
+    * 配置ssh + git账号
+    * `git clone git@github.com:huangrt01/dotfiles-local.git`
+
+  * ```shell
+    git config --global user.name "huangrt01"
+    git config --global user.email huangrt01@163.com
+    
+    # MacOs
+    ssh-keygen -t rsa -b 4096 -C "huangrt01@163.com" # 如果rsa已占用，可用ssh-keygen -t ed25519 -C "huangruiteng@xxx.com"
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_rsa --apple-use-keychain # MacOS带
+    pbcopy < ~/.ssh/id_rsa.pub  # MacOS , Linux用xclip
+    
+    上github添加SSH Key
+    
+    ssh -T git@github.com
+    # ssh-keygen -y -f ~/.ssh/id_rsa
+    
+    # Linux
+    ```
+
 * Iterm2、Sublime text
-  * enter iTerm2/Preferences/Profile/Text/Font/Meslo*
+  * enter iTerm2/Settings
+    * Profiles/Text/Font -> Meslo*
+    * Profiles/Colors/ColorPresets -> Pastel*
   * Unlimited scroll back 
 
-* CS-Notes
-* Chrome账号、Typora
-* VSCode、豆包、微信
+* Chrome
+
+  * 账号
+
+* Typora
+
+  * 序列号
+
+* VSCode、Trae、豆包、微信
+
 * Mendeley
   * https://www.mendeley.com/download-reference-manager/macOS
 
 * QuickJump
-* [hammerspoon](https://github.com/Hammerspoon/hammerspoon)
-* [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
+
+
+
+* 暂时搁置
+
+  * [hammerspoon](https://github.com/Hammerspoon/hammerspoon)
+
+  * [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 
 ### dotfile
 
