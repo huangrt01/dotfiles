@@ -47,8 +47,12 @@
 * Typora
 
   * 序列号
+  * ![image-20250319230752532](./README/image-20250319230752532.png)
+  * 内联公式开启
 
-* VSCode、Trae、豆包、微信
+* 豆包、微信
+
+* Clion、VSCode、Trae
 
 * Mendeley
   * https://www.mendeley.com/download-reference-manager/macOS
