@@ -4,9 +4,10 @@ Host *
   IdentityFile ~/.ssh/id_rsa
   UseKeychain yes
 
-Host 10.*
-    GSSAPIAuthentication yes
+Host *
+    GSSAPIAuthentication yes   # kinit
     GSSAPIDelegateCredentials no
+    StrictHostKeyChecking no
 
 Host public.cvailab.ee
     HostName public.cvailab.ee
@@ -31,3 +32,5 @@ Host github.com
 	IdentityFile ~/.ssh/id_rsa
 	Port 443
 
+
+	
