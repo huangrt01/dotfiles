@@ -175,6 +175,9 @@ set omnifunc=ale#completion#OmniFunc
 let @e = '^r"f>s": "f<C"'
 let @p = 'S{€ýaj@eA,j@ejS},'
 
+" git rebase
+nnoremap F ^dwif <Esc>j
+
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
