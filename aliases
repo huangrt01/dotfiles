@@ -66,3 +66,5 @@ alias push='~/dotfiles-local/push_with_backup.sh'
 my-clang-format() {
     find "$1" -name '*.cpp' -o -name '*.h' | xargs clang-format -i
 }
+
+alias nvidia-smi-full="nvidia-smi && (nvidia-smi |tr -s ' '|grep -Eo "| [0123456789]+ N/A N/A [0-9]{3,} .*"|awk -F' ' '{system("s=$(cat /proc/"$4"/cmdline| tr \"\\0\" \" \");u=$(ps -o uname= -p "$4");echo "$1"sep"$4"sep$u sep"$7"sep$s" ) }'|sed 's/sep/\t/g')"
