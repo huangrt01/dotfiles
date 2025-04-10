@@ -50,7 +50,7 @@
   * ![image-20250319230752532](./README/image-20250319230752532.png)
   * 内联公式开启
 
-* 豆包、微信
+* 豆包、微信、网易云音乐
 
 * Clion、VSCode、Trae
 
@@ -215,11 +215,28 @@ sudo apt-get install manpages-dev
 sudo apt-get install gdb
 ```
 
+#### X11 Forwarding
+
+https://blog.wangluyuan.cc/2020/12/24/forwarding-x11/
+
+
+
 ### Macbook
 
 * 自动化：
   * 安装brew
   * 下载安装powerline font
+
+### Clion
+
+* git插件生效
+  * `git config --global --add safe.directory /root/newrec/huangruiteng/tiger_team`
+
+* yapf format
+  * ![image-20250401162909307](./README/image-20250401162909307.png)
+  * 需要重启IDE才能在KeyMap里看到
+
+
 
 ### VSCode
 
@@ -258,3 +275,7 @@ sudo apt-get install gdb
       * 自动构建
       * 手动生成：`mkdir build && cd build && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..`
     * 如果linux的glibc版本较旧，需要给clangd打补丁（patchelf），链接向新版glibc
+
+### Reference
+
+* 可以参考：https://github.com/AnswerDotAI/fastsetup
