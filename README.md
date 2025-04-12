@@ -210,9 +210,8 @@ brew install gnupg
 ### Linux
 
 ```
-sudo apt-get update
-sudo apt-get install manpages-dev
-sudo apt-get install gdb
+apt update
+apt install gdb manpages-dev file
 ```
 
 #### X11 Forwarding
