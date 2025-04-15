@@ -211,7 +211,7 @@ brew install gnupg
 
 ```
 apt update
-apt install gdb manpages-dev file
+apt install gdb manpages-dev file sysstat
 ```
 
 #### X11 Forwarding
