@@ -57,7 +57,7 @@ done
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"           # dotfiles directory
 olddir=~/dotfiles_old      # old dotfiles backup directory
 echo "$dir"
-files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig gitignore_global tmux.conf aliases prompt mybin zplug fzf "$ZSH_PLUG$OTHER_PLUG
+files="bashrc bash_profile vimrc vim zshrc ssh/config gitconfig gitignore_global dotfile_tools tmux.conf aliases prompt mybin zplug fzf "$ZSH_PLUG$OTHER_PLUG
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir

@@ -72,3 +72,4 @@ alias nvidia-info='nvidia-smi && (nvidia-smi |tr -s " "|grep -Eo "| [0123456789]
 alias condai='if ! command -v conda &> /dev/null; then source "$HOME/anaconda3/bin/activate"; fi && conda'
 alias gdbp='f(){ pid=$(pgrep -f "$1" | head -n 1); if [ -n "$pid" ]; then gdb -p "$pid"; else echo "No process found matching: $1"; fi }; f'
 alias grepctx='grep -r -n -C 3 --color=auto'
+alias calc_csv_avg='python3 ~/.dotfile_tools/calc_csv_avg.py'
