@@ -181,11 +181,10 @@ apt install stress
 apt install htop
 ```
 
-* python3, pip3, ipython, ipdb, [line_profiler](https://github.com/pyutils/line_profiler), [memory-profiler](https://pypi.org/project/memory-profiler/), [pycallgraph](http://pycallgraph.slowchop.com/en/master/)
+* python3, pip3, ipython, ipdb
+  * Pip3:  [line_profiler](https://github.com/pyutils/line_profiler), [memory-profiler](https://pypi.org/project/memory-profiler/), [pycallgraph](http://pycallgraph.slowchop.com/en/master/)
 ```
-pip install memory-profiler
-pip install line_profiler
-pip install pycallgraph
+pip install pycallgraph, tabulate, line_profiler, memory-profiler
 apt/brew install graphviz
 # dot -v
 ```
