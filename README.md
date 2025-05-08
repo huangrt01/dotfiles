@@ -59,6 +59,10 @@
 
 * QuickJump
 
+* MailMaster, WeChat
+
+* 解压缩 https://theunarchiver.com/
+
 
 
 * 暂时搁置
@@ -107,7 +111,7 @@ endif
 if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 ```
 
-#### Manually install
+#### Manually install (apt/pip)
 
 * vim-ale related: [shellcheck](https://github.com/koalaman/shellcheck), [write-good](https://github.com/btford/write-good)(or [proselint](http://proselint.com/) )
 
@@ -116,7 +120,6 @@ brew/apt install shellcheck
 npm install -g write-good
 ```
 
-* MailMaster, WeChat
 * [tldr](https://tldr.sh/), fd, rg, [mosh](https://mosh.org/#getting), [tree](http://mama.indstate.edu/users/ice/tree/), ag
 
 ```shell
@@ -140,6 +143,8 @@ apt install cloc
 
 ```shell
 sudo apt-get update
+pip3 install --upgrade pip
+
 sudo apt install zsh
 zsh --version
 
@@ -185,6 +190,7 @@ apt install htop
   * Pip3:  [line_profiler](https://github.com/pyutils/line_profiler), [memory-profiler](https://pypi.org/project/memory-profiler/), [pycallgraph](http://pycallgraph.slowchop.com/en/master/)
 ```
 pip install pycallgraph, tabulate, line_profiler, memory-profiler
+pip3 install openai
 apt/brew install graphviz
 # dot -v
 ```
