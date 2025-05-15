@@ -31,8 +31,8 @@ def calculate_column_averages(filepath):
                  print(f"错误：文件 '{filepath}' 的列数少于2，无法计算平均值。")
                  return None, None
 
-            # 初始化字典，从第二列开始
-            for col_name in header[1:]:
+            # 初始化字典，从第一列开始
+            for col_name in header:
                 column_sums[col_name] = 0.0
                 column_counts[col_name] = 0
 
@@ -44,8 +44,8 @@ def calculate_column_averages(filepath):
                     continue
 
                 # 遍历从第二列开始的每一列
-                for i, col_name in enumerate(header[1:]):
-                    col_index = i + 1 # 实际列索引
+                for i, col_name in enumerate(header):
+                    col_index = i # 实际列索引
                     value_str = row[col_index].strip() # 获取并清理字符串
                     try:
                         # 尝试将值转换为浮点数
@@ -72,7 +72,7 @@ def calculate_column_averages(filepath):
 
     # 计算平均值
     averages = {}
-    for col_name in header[1:]:
+    for col_name in header:
         if column_counts.get(col_name, 0) > 0: # 使用 get 避免 Key Error
             averages[col_name] = column_sums[col_name] / column_counts[col_name]
         else:
@@ -82,7 +82,7 @@ def calculate_column_averages(filepath):
 
 if __name__ == "__main__":
     # --- 设置命令行参数解析 ---
-    parser = argparse.ArgumentParser(description='计算 CSV 文件数值列（从第二列开始）的平均值。')
+    parser = argparse.ArgumentParser(description='计算 CSV 文件数值列（从第一列开始）的平均值。')
     parser.add_argument('csv_filepath', type=str, help='要处理的 CSV 文件的路径。')
     # --- 解析参数 ---
     args = parser.parse_args()
@@ -93,9 +93,9 @@ if __name__ == "__main__":
     header, column_averages = calculate_column_averages(csv_file_path)
 
     if header and column_averages:
-        print("\n各列平均值 (从第二列开始):")
+        print("\n各列平均值 (从第一列开始):")
         # 按照原始表头顺序打印
-        for col_name in header[1:]:
+        for col_name in header:
             avg = column_averages.get(col_name, float('nan')) # 使用 get 以防万一
             print(f"- {col_name}: {avg:.6f}") # 格式化输出，保留6位小数
     else:
