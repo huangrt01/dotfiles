@@ -116,7 +116,7 @@ if-shell "[ -f ~/.tmux_local.conf ]" 'source ~/.tmux_local.conf'
 * vim-ale related: [shellcheck](https://github.com/koalaman/shellcheck), [write-good](https://github.com/btford/write-good)(or [proselint](http://proselint.com/) )
 
 ```shell
-brew/apt install shellcheck
+apt install shellcheck
 npm install -g write-good
 ```
 
@@ -191,17 +191,13 @@ apt install htop
 ```
 pip install pycallgraph, tabulate, line_profiler, memory-profiler
 pip3 install openai
-apt/brew install graphviz
+apt install graphviz
 # dot -v
 ```
 
 **Security**:
 
 * [gpg](https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages), [haveged](https://www.digitalocean.com/community/tutorials/how-to-setup-additional-entropy-for-cloud-servers-using-haveged)
-
-```sh
-brew install gnupg
-```
 
 **Firefox Add-on**
 
