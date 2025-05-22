@@ -73,3 +73,20 @@ alias condai='if ! command -v conda &> /dev/null; then source "$HOME/anaconda3/b
 alias gdbp='f(){ pid=$(pgrep -f "$1" | head -n 1); if [ -n "$pid" ]; then gdb -p "$pid"; else echo "No process found matching: $1"; fi }; f'
 alias grepctx='grep -r -n -C 3 --color=auto'
 alias calc_csv_avg='python3 ~/.dotfile_tools/calc_csv_avg.py'
+
+my_proxy=
+no_proxy=
+
+toggle_proxy () {
+	if [[ -z "${http_proxy}" ]]
+	then
+		export http_proxy=${my_proxy} https_proxy=${my_proxy} HTTP_PROXY=${my_proxy} HTTPS_PROXY=${my_proxy}
+		echo "proxy on"
+	else
+		unset http_proxy
+		unset https_proxy
+		unset HTTP_PROXY
+		unset HTTPS_PROXY
+		echo "proxy off"
+	fi
+}
